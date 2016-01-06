@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/css.css"/>
+</head>
+<body ng-app="myApp">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="row">
+        <div class="navbar-header ">
+            <div class="col-md-12">
+            <h3>回家吧！宝贝。<small>大型寻人启事</small></h3>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
+<div class="container" ng-controller="myCtrl">
+    <div class="row">
+        <div class="col-md-4 list bgcolor1" ng-repeat="x in children">
+                <img align="left" src={{imgHost+x.child_pic}} alt=""/>
+                <ul >
+                    <li class="name">姓名：{{x.name}}</li>
+                    <li>性别：{{x.sex}}</li>
+                    <li>出生日期：{{x.birth_time}}</li>
+                    <li>失踪日期：{{x.lost_time}}</li>
+                    <li>失踪地点：{{x.lost_place}}</li>
+                </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.4.8/angular.min.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.4.8/angular-animate.min.js"></script>
+<script src="./js/my.js"></script>
+</html>
