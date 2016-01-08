@@ -39,3 +39,52 @@
     border-radius: 4px;
     background-color: rgba(195, 229, 186, 0.15);
 }
+
+.navbar-header {
+    width: 100%;
+}
+
+.container .row .search-child {
+    position: absolute;
+    top: 12px;
+}
+
+.container .row .search-child .glyphicon-user {
+    position: absolute;
+    font-size: 16px;
+    top: 9px;
+    left: 8px;
+}
+
+.container .row .search-child .glyphicon-search {
+    position: absolute;
+    font-size: 16px;
+    top: 9px;
+    left: 135px;
+}
+
+.container .row .title {
+    text-align: right;
+    font-size: 30px;
+    font-family: Microsoft yahei;
+}
+
+.container .row .search-child .form-control {
+    display: inline;
+}
+
+.container .row .search-child select {
+    width: 79px;
+}
+
+.container .row input {
+    width: 160px;
+    padding-left: 25px;
+}
+
+.container .row .select {
+    position: absolute;
+    left: 190px;
+    top: 1px;
+}
+
