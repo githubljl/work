@@ -24,3 +24,5 @@
 3、file 下Synchronize ；
 
 因为我试过第一个push后，github没反应，webstorm告诉我已经更新了，然后我又用了Commit ，额，反正成功了。。回家再研究研究路由。
+
+今天我就测试webstorm中vcs下git push的功能，看看我回家后能不能看到这句话，速度太慢了。
