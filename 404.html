@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-view>
+<html lang="en" ng-view>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="./css/animate.css"/>
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="angular/angular.min.js"></script>
+    <!--<script src="angular/angular.min.js"></script>-->
+    <script src="http://each.sinaapp.com/js/angular/angular.min.js"></script>
     <script src="angular/angular-route.min.js"></script>
     <!--<script src="angular/angular-animate.min.js"></script>-->
-    <script src="http://cdn.bootcss.com/angular.js/1.2.9/angular-animate.min.js"></script>
+    <script src="http://each.sinaapp.com/js/angular/angular-animate.min.js"></script>
+    <!--<script src="http://cdn.bootcss.com/angular.js/1.2.9/angular-animate.min.js"></script>-->
     <script src="./js/my.js"></script>
 </head>
-<body>
+<body ng-controller="myCtrl" ng-app="myApp">
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
     <div class="row">
@@ -23,9 +25,9 @@
             <div class="col-md-12">
                 <div class="search-child form-inline">
                     <span class="glyphicon glyphicon-user hand-behavior"></span>
-                    <input type="text" class="form-control" placeholder="快速寻人搜索">
+                    <input type="text" class="form-control" placeholder="快速寻人搜索" ng-model="userkeyword">
                     <span class="glyphicon glyphicon-search"></span>
-                    <select class="form-control">
+                    <select class="form-control" ng-model="usersex">
                         <option value="">性别</option>
                         <option value="男">男</option>
                         <option value="女">女</option>
@@ -40,20 +42,31 @@
     </div>
     </div>
 </nav>
-<div class="container" ng-controller="myCtrl">
+<div class="container">
     <div class="row">
-        <div class="col-md-4 list bgcolor1" ng-repeat="x in children">
-            <img align="left" ng-src={{imgHost+x.child_pic}} onerror="this.src = defaultBabyImg" alt=""/>
+        <!--  -->
+        <div class="col-md-4 list bgcolor1 repeater"
+             ng-repeat="x in children | filter: {sex: usersex} | filter: userkeyword">
+            <img align="left" ng-src={{imgHost+x.child_pic}} onerror="this.src='images/1.jpg'" alt=""/>
                 <ul >
                     <li class="name">姓名：{{x.name}}</li>
                     <li>性别：{{x.sex}}</li>
                     <li>出生日期：{{x.birth_time}}</li>
                     <li>失踪日期：{{x.lost_time}}</li>
                     <li>失踪地点：{{x.lost_place}}</li>
-
                 </ul>
         </div>
     </div>
 </div>
+<!--<script type="text/javascript">-->
+<!--defaultImg = document.getElementById("defaultImg");-->
+<!--//test = document.getElementsByTagName("img");-->
+<!--defaultImg.onerror = ifImgNotExists();-->
+
+<!--function ifImgNotExists(){-->
+<!--defaultImg.src="";-->
+<!--defaultImg.onerror=null;-->
+<!--}-->
+<!--</script>-->
 </body>
 </html>

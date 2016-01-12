@@ -26,3 +26,9 @@
 因为我试过第一个push后，github没反应，webstorm告诉我已经更新了，然后我又用了Commit ，额，反正成功了。。回家再研究研究路由。
 
 今天我就测试webstorm中vcs下git push的功能，看看我回家后能不能看到这句话，速度太慢了。
+
+
+#收货的知识
+1、angualr1.29版本filter: {sex: usersex}才能行，1.3以上版本只能输入过滤信息后才出现内容
+2、想要使用angular-animate.min.js的动画效果，在这几个ng-animate   ng-enter   ng-enter-active上面写你要的动画即可，与之对应的有ng-leave等。
+3、

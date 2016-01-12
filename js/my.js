@@ -1,10 +1,8 @@
 /**
  * Created by Administrator on 2016/1/5.
  */
-
 var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
-
-
+//
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/404', {
         templateUrl: '404.html',
@@ -13,6 +11,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).otherwise({redirectTo: '/404'});
     //$urlRouterProvider.html5Mode(true);
 }]);
+
 app.controller('myCtrl', ['$scope' , '$http', function($scope, $http) {
     var url='js/json.js';
     $http.get(url)
@@ -37,8 +36,8 @@ app.controller('myCtrl', ['$scope' , '$http', function($scope, $http) {
             console.log(data);
         })
 
-    $scope.defaultBabyImg = './images/1.jpg';
+    //$scope.imgs=$('img').error('');
+    //console.log($scope.imgs);
+
 }
 ]);
-
-

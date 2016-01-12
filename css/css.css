@@ -47,6 +47,7 @@
 .container .row .search-child {
     position: absolute;
     top: 12px;
+    z-index: 1;
 }
 
 .container .row .search-child .glyphicon-user {
@@ -86,5 +87,38 @@
     position: absolute;
     left: 190px;
     top: 1px;
+}
+
+/********************Animate used Here**************************************/
+.repeater.ng-enter {
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    opacity: 0;
+    -webkit-transform: scale(1.15) !important;
+    transform: scale(1.15) !important;
+}
+
+.repeater.ng-enter.ng-enter-active {
+    opacity: 1;
+    -webkit-transform: scale(1) !important;
+    transform: scale(1) !important;
+}
+
+.repeater.ng-leave {
+    -webkit-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    opacity: 1;
+}
+
+.repeater.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.repeater.ng-enter-stagger,
+.repeater.ng-leave-stagger {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
 }
 
